@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+      <record id="cct" model="fongip.nature.credit">
+      	<field name="name">CCT</field>
+      </record>
+      <record id="clt" model="fongip.nature.credit">
+      	<field name="name">CLT</field>
+      </record>
+      <record id="cmt" model="fongip.nature.credit">
+      	<field name="name">CMT</field>
+      </record>
+      <record id="decouvert" model="fongip.nature.credit">
+      	<field name="name">Découvert</field>
+      </record> 
+      <record id="aval_de_traites" model="fongip.nature.credit">
+      	<field name="name">Aval de traites</field>
+      </record> 
+      <record id="credit_bail" model="fongip.nature.credit">
+      	<field name="name">Crédit-Bail</field>
+      </record>
+      <record id="credit_campagne" model="fongip.nature.credit">
+      	<field name="name">Crédit Campagne</field>
+      </record>
+      <record id="credit_exploitation" model="fongip.nature.credit">
+      	<field name="name">Crédit d'exploitation</field>
+      </record>
+      
+</odoo>

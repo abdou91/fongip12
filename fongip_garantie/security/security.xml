@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="module_guarantee_category" model="ir.module.category">
+            <field name="name">Garantie</field>
+            <field name="sequence">18</field>
+    </record>
+    <record id="guarantee_group_user" model="res.groups">
+            <field name="name">Utilsateur</field>
+            <field name="category_id" ref="base.module_category_funding_guarantee"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <record id="guarantee_group_manager" model="res.groups">
+            <field name="name">Administrateur</field>
+            <field name="implied_ids" eval="[(4, ref('guarantee_group_user'))]"/>
+            <field name="category_id" ref="base.module_category_funding_guarantee"/>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <data noupdate="0">
+        <record id="base.default_user" model="res.users">
+            <field name="groups_id" eval="[(4,ref('fongip_garantie.guarantee_group_manager'))]"/>
+        </record>
+        <!--record id="project_rule" model="ir.rule">
+            <field name="name">Project rule</field>
+            <field name="model_id" ref="model_fongip_project"/>
+            <field name="groups" eval="[(4, ref('fongip_garantie.guarantee_group_user'))]"></field>
+            <field name="domain_force">[(1,'=',1)]</field>
+        </record-->
+        
+    </data>
+</odoo>
