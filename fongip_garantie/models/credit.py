@@ -223,7 +223,7 @@ class FongipCreditGarantie(models.Model):
 				montant_echeance = round(capitalEnDebutPeriode * interest_rate / (1 -(1 + interest_rate)**(-nombre_echeance)),0)
 				nbreCycle = int(nombre_echeance)
 			except ZeroDivisionError:
-				print "ok"
+				print("ok")
 
 			commission_dict = {
 							#'name' : "Facture G"+str(numero)+" : Durée = "+str(duree)+" mois",
