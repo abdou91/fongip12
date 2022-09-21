@@ -304,7 +304,7 @@ class FongipCreditImport(models.Model):
 		string = "Date d'import",
 		default=lambda self: fields.Datetime.now()
 		)
-    filename = fields.Char('File Name')
+	filename = fields.Char('File Name') 
     data = fields.Binary('Importer le fichier')
     credit_import_line_ids = fields.One2many(
     	'fongip.credit.import.line',
